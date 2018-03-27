@@ -1,7 +1,7 @@
 # semicolons
 ## personnel
-Helen Chan 
-Tahmid Jamal
+  Helen Chan 
+  Tahmid Jamal
 
 ## statement of problem
   Returns the Boolean value of the statement “the maze is navigable, having a legal
