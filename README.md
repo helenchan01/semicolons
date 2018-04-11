@@ -5,23 +5,30 @@
 
 ## statement of problem
     Returns the Boolean value of the statement “the maze is navigable, having a legal
-    travel path that is continuous from start point to existing treasure”
+    travel path that is continuous from start point to existing treasure.” The path 
+    should consist of right-angle turns and should not cross any walls or another 
+    part of the path. 
 
 ## recursive abstraction
     When I am asked to
-        solve for a path through a maze with n junctions,
+        solve for a path through a maze where an explorer is on a stone,
     the recursive abstraction can
-        find a path through the maze to reach the (n-1)th junction.
+        solve a smaller maze in which the explorer has been moved to the next stone.
    
 ## base case 
-    The treasure is at the the next junction. 
+    The explorer is on treasure or in a wall.  
     
 ## algorithm 
-    If the treasure is in the next junction, return true. 
-    If there is no path available, return false. 
-    Otherwise, for every path available, 
-        enter that path and try to solve from there using 
-            this method recursively. 
+    If the explorer is on treasure, return true. 
+    If the explorer is in a wall, return false. 
+    Otherwise, for every legal direction you can make from the explorer's position,
+        save a snapshot of the maze
+        turn the stone the explorer is on into a wall
+        move the explorer in one legal direction
+        attempt to solve this smaller maze.
+            If you can solve the smaller maze, return true.
+            If you can't, revert to the snapshot and perform the next possible legal
+                move.
     Return false. 
     
 ## classes, with fields and methods  
