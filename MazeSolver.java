@@ -1,7 +1,7 @@
 /**
   Solve a maze 
   
-  needs more header
+  represents a legal path that the explorer can take to the treasure
  */
  
  
