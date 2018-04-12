@@ -33,6 +33,9 @@
     
 ## classes, with fields and methods  
 
-## version *n* wish list 
+## version *n* wish list
+
+## known bugs 
+ 
     
 

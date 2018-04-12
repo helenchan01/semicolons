@@ -9,7 +9,7 @@
 public class UserOfMazeSolver {
     private static Displayer displayer;
     
-    public static void main(String[] args) 
+    public static void main(String[] commandLine) 
         
         throws java.io.FileNotFoundException {
         System.out.println();

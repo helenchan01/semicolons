@@ -14,9 +14,14 @@ public class MazeSolver {
     public boolean solve() {
         if (maze.explorerIsOnA() == maze.TREASURE) {
             return true;
-        } else if (maze.explorerIsOnA() == maze.WALL) {
+		}
+        if (maze.explorerIsOnA() == maze.WALL) {
             return false;
         }
-        return false;
+		Maze dummy = new Maze(this.maze);
+		dummy.go(Maze.EAST);
+		MazeSolver mini = new MazeSolver ( dummy);
+		return mini.solve();
+		return false;
     }
 }
