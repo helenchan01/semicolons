@@ -7,6 +7,10 @@
 
   For example,
       java UserOfMaze mazes/4cell_treasureWest.txt -1 -1 
+      
+  As of v0, shows whether it is possible to for an explorer 
+  dropped on an arbitrary start position to legally trace a 
+  path to the treasure.
  */
 public class UserOfMazeSolver {
     private static Displayer displayer;
