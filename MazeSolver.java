@@ -1,7 +1,7 @@
 /**
   Solve a maze 
   
-  represents a legal path that the explorer can take to the treasure
+  Represents a legal path that the Explorer can take to the Treasure
  */
  
  
