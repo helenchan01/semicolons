@@ -5,7 +5,7 @@
   dropped on an arbitrary start position to legally trace a 
   path to the treasure.
  */
-public class MazeSolver_v0. {
+public class MazeSolver_v0 {
     
     private Maze maze;
     public MazeSolver( Maze maze) {
