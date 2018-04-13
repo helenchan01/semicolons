@@ -6,7 +6,7 @@
   o  the rank and file where an explorer is starting
   
  */
-public class UserOfMazeSolver_v0 {
+public class UserOfMazeSolver_v {
     private static Displayer displayer;
     
     public static void main(String[] commandLine) 
