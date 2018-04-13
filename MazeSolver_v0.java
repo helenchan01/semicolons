@@ -21,6 +21,7 @@ public class MazeSolver_v0 {
             return false;
         }
 	// for every direction
+	// alternatively for (int direction = 1; direction <= 8; direction*2) { 
 	for (int dirIndex = 0; dirIndex < 4; dirIndex++ ) {
 	    Maze snapshot = new Maze(maze);
 	    // debugging
