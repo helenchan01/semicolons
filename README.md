@@ -32,9 +32,27 @@
     Return false. 
     
 ## classes, with fields and methods  
+    Maze 
+        Fields 
+            maze int[][]
+            stepping stones, walls, treasure
+            directions 
+        Methods 
+            Maze constructor (from params)
+            Maze copy constructor
+            toString
+            go (to move explorer)
+            dropA (turn explorer's position into a specified tile)
+            explorerIsOn
+            
+### Maze 
+    
 
 ## version *n* wish list
-
+    Combine the two for loops.
+    Add in functionality to show route to take to treasure.
+    If multiple, show every single route to take to treasure. 
+    
 ## known bugs 
     have yet to test more complicated mazes
  
