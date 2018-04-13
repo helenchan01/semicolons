@@ -19,8 +19,8 @@ public class UserOfMazeSolver_v0 {
       
         Displayer displayer = new Displayer( Integer.parseInt( commandLine[3]));
 
-        MazeSolver solver = new MazeSolver();
-        System.out.println(MazeSolver.mazeIsSolvable(maze));
+        MazeSolver_v0 solver = new MazeSolver_v0();
+        System.out.println(solver.mazeIsSolvable(maze));
 
         }
     
