@@ -36,7 +36,7 @@
 ## version *n* wish list
 
 ## known bugs 
-    can only solve mazes that go in the west and/or east direction(s).
+    have yet to test more complicated mazes
  
     
 
