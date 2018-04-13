@@ -18,10 +18,13 @@ public class MazeSolver_v0 {
         if (maze.explorerIsOnA() == maze.WALL) {
             return false;
         }
-		Maze dummy = new Maze(this.maze);
-		dummy.go(Maze.EAST);
-		MazeSolver mini = new MazeSolver ( dummy);
-		return mini.solve();
-		return false;
+	Maze snapshot = new Maze(maze);
+	maze.go(Maze.EAST);
+	if (maze.explorerIsOnA() == maze.WALL) {
+		
+	//dummy.go(Maze.EAST);
+	//MazeSolver mini = new MazeSolver ( dummy);
+	//return mini.solve();
+	return false;
     }
 }
