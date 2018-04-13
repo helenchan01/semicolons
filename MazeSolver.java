@@ -29,20 +29,20 @@ public class MazeSolver {
         for (int i = 0; i < 4; i++) {
             Maze snapshot = new Maze(maze);
             maze.go(directions[i]);
-            System.out.println("Explorer has moved " + directions[i]);  
+            // System.out.println("Explorer has moved " + directions[i]);  
             if (maze.explorerIsOnA() != maze.WALL) {
                 legalDirections[i] = directions[i];
-                System.out.println("The previous movement was legal");
+                // System.out.println("The previous movement was legal");
             }
             maze = snapshot;
-            System.out.println("The previous movement has been reverted");
+            // System.out.println("The previous movement has been reverted");
         }      
         
         for (int direction: legalDirections) {
             if (direction > 0) { 
                 Maze snapshot = new Maze(maze);
                 maze.dropA(maze.WALL);
-                System.out.println("Moving in the legal direction " + direction);
+                // System.out.println("Moving in the legal direction " + direction);
                 maze.go(direction);
                 if (mazeIsSolvable(maze)) {
                     return true;
