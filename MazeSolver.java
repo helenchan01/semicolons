@@ -5,10 +5,13 @@
   dropped on an arbitrary start position to legally trace a 
   path to the treasure.
  */
-public class MazeSolver_v0 {
+
+// v1
+
+public class MazeSolver {
     
     private Maze maze;
-    public MazeSolver_v0() {
+    public MazeSolver() {
  
     }
     public static boolean mazeIsSolvable(Maze maze) {
