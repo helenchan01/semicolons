@@ -44,10 +44,7 @@
             go (to move explorer)
             dropA (turn explorer's position into a specified tile)
             explorerIsOn
-            
-### Maze 
-    
-
+       
 ## version *n* wish list
     Combine the two for loops.
     Add in functionality to show route to take to treasure.
@@ -56,5 +53,8 @@
 ## known bugs 
     have yet to test more complicated mazes
  
+##v1 
+    Improve efficiency of vode
+    Add more comments explaining code 
     
 
