@@ -9,6 +9,8 @@ public class MazeSolver {
     
     private static final int[] directions = { Maze.NORTH, Maze.EAST, Maze.SOUTH, Maze.WEST };
     private Maze maze;
+    private static Displayer displayer = new Displayer(20);
+    private static int step = 0;
 	
     public static boolean solve(Maze maze) {
         if (maze.explorerIsOnA() == maze.TREASURE) {
@@ -25,6 +27,8 @@ public class MazeSolver {
 	    //System.out.println("snapshot" + System.lineSeparator() + snapshot);	
 	    maze.dropA(Maze.WALL);		
 	    maze.go(directions[dirIndex]);
+	    displayer.atTopOfWindow(maze + "step " + step++);
+
 	    // if the explorer in recursive maze reaches the treasure, there is a solution	
             if (solve(maze)) {
 		return true;
