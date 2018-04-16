@@ -55,6 +55,10 @@
     
 ## known bugs 
     have yet to test more complicated mazes
+    
+##v1 
+    Improve efficiency of vode
+    Add more comments explaining code 
  
     
 
