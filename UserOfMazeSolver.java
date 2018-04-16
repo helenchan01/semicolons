@@ -6,9 +6,6 @@
   o  the rank and file where an explorer is starting
   
  */
-
-// v1
-
 public class UserOfMazeSolver {
     private static Displayer displayer;
     
@@ -22,10 +19,11 @@ public class UserOfMazeSolver {
       
         Displayer displayer = new Displayer( Integer.parseInt( commandLine[3]));
 
-        MazeSolver solver = new MazeSolver();
-        System.out.println(solver.mazeIsSolvable(maze));
+        //MazeSolver solver = new MazeSolver( maze);
+        System.out.println(MazeSolver.solve(maze));
 
         }
     
     
 }
+

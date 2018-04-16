@@ -5,56 +5,39 @@
   dropped on an arbitrary start position to legally trace a 
   path to the treasure.
  */
-
-// v1
-
 public class MazeSolver {
     
+    private static final int[] directions = { Maze.NORTH, Maze.EAST, Maze.SOUTH, Maze.WEST };
     private Maze maze;
-    public MazeSolver() {
- 
-    }
-    public static boolean mazeIsSolvable(Maze maze) {
-        // System.out.println(maze);
-        
+	
+    public static boolean solve(Maze maze) {
         if (maze.explorerIsOnA() == maze.TREASURE) {
             return true;
 		}
         if (maze.explorerIsOnA() == maze.WALL) {
             return false;
         }
-        
-		// Maze snapshot = new Maze(maze); //C
-        
-        int[] legalDirections = new int[4];
-        int[] directions = {maze.EAST, maze.NORTH, maze.WEST, maze.SOUTH};
-        
-        for (int i = 0; i < 4; i++) {
-            Maze snapshot = new Maze(maze);
-            maze.go(directions[i]);
-            // System.out.println("Explorer has moved " + directions[i]);  
-            if (maze.explorerIsOnA() != maze.WALL) {
-                legalDirections[i] = directions[i];
-                // System.out.println("The previous movement was legal");
-            }
-            maze = snapshot;
-            // System.out.println("The previous movement has been reverted");
-        }      
-        
-        for (int direction: legalDirections) {
-            if (direction > 0) { 
-                Maze snapshot = new Maze(maze);
-                maze.dropA(maze.WALL);
-                // System.out.println("Moving in the legal direction " + direction);
-                maze.go(direction);
-                if (mazeIsSolvable(maze)) {
-                    return true;
-                }
-                else {
-                    maze = snapshot;
-                }
-            }
-        }
-        return false;
+	Maze snapshot = new Maze(maze);
+	// for every direction
+	// alternatively for (int direction = 1; direction <= 8; direction*2) { 
+	for (int dirIndex = 0; dirIndex < 4; dirIndex++ ) {
+	    // debugging
+	    //System.out.println("snapshot" + System.lineSeparator() + snapshot);	
+	    maze.dropA(Maze.WALL);		
+	    maze.go(directions[dirIndex]);
+	    // if the explorer in recursive maze reaches the treasure, there is a solution	
+            if (solve(maze)) {
+		return true;
+	    }
+	    // if explorer hits a wall, restore to previous version	
+	    else {
+		// debugging
+		///System.out.println("before restoring" + System.lineSeparator() + maze);    
+		maze = new Maze(snapshot);
+		//System.out.println("after restoring" + System.lineSeparator() + maze);  
+	    }
+	}
+	return false;
     }
 }
+
